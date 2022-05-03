@@ -11,7 +11,7 @@ app.use(cookieParser());
 const { default: mongoose } = require('mongoose');
 const loginRoute=express.Router();    
 app.use('/loginSignup',loginRoute);                               
-app.listen(3000)                  
+app.listen(process.env.PORT||3000)                  
 app.use(express.json());           
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
